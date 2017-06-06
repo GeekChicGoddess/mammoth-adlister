@@ -20,7 +20,7 @@ public class HelloWorldServlet extends HttpServlet {
             String aName = request.getParameter("name");
 
             if(aName != null) {
-                    out.println("<h1>Hello, " + aName + "</h1>");
+                    out.printf("<h1>Hello, %s</h1>", aName);
 
                 }
 
