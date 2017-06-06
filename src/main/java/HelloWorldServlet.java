@@ -27,7 +27,7 @@ public class HelloWorldServlet extends HttpServlet {
             else {
                 out.println("<h1>Hello, World!</h1>");
             }
-        out.println("<h2>Page visit count: " + counter + "</hw>");
+        out.println("<h2>Page visit count: " + counter + "</h2>");
         }
 
 }
