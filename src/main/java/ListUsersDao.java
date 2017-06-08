@@ -20,17 +20,18 @@ public class ListUsersDao implements Users{
 
     @Override
     public User getUserById(long id) {
-        return getUserById(id);
+        return null;
     }
 
     @Override
     public User getUserByEmail(String email) {
-        return getUserByEmail(email);
+        return null;
     }
 
     @Override
     public User getUserByUsername(String username){
-        return getUserByUsername(username);
+        int ind = this.users.indexOf(username.contains(username));
+        return this.users.get(ind);
     }
 
     public List<User> generateDummyUsers(){

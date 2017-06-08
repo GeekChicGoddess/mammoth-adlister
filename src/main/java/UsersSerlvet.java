@@ -16,7 +16,7 @@ public class UsersSerlvet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<User> users = DaoFactory.getUsersDao().all();
         request.setAttribute("instructors", users);
-        request.getRequestDispatcher("/profile.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
 
     }
 }
