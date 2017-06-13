@@ -16,7 +16,21 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"></jsp:include>
 
-
+<form action="/register" method="post">
+    <label>
+        Choose a username of 10 characters or less
+        <input size="20" type="text" name="username">
+    </label>
+    <label>
+        Enter your email address
+        <input size="200" type="email" name="email">
+    </label>
+    <label>
+        Choose a password between 8 and 15 characters
+        <input size="50" type="password" name="password">
+    </label>
+    <input type="submit" class="btn btn-primary btn-block" value="Submit" size="6">
+</form>
 
 </body>
 </html>

@@ -55,7 +55,9 @@ public class MySQLUsersDao implements Users {
             statement.executeUpdate();
             ResultSet resultSet = statement.getGeneratedKeys();
             resultSet.next();
-            return resultSet.getLong(1);
+            Long ID = resultSet.getLong(1);
+            user.setId(ID);
+            return ID;
         }
         catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
