@@ -27,14 +27,15 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
-    public User  findByUsername (String username){
+    public User findByUsername (String username){
         PreparedStatement statement = null;
 
         try {
-            String SQL = "SELECT * FROM users WHERE username LIKE ?";
+            String SQL = "SELECT * FROM users WHERE username = ?";
             statement = connection.prepareStatement(SQL);
             statement.setString(1, username);
             ResultSet rs = statement.executeQuery();
+            rs.next();
             return new User (rs.getLong(1), rs.getString(2), rs.getString(4), rs.getString(3));
 
         }

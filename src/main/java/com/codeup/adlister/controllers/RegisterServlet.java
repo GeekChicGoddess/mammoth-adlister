@@ -22,7 +22,6 @@ public class RegisterServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
-        System.out.println(username + " " + password + " " + email);
 
         if ((username != null) && (password != null) && (email != null)) {
             User user = new User(
@@ -31,7 +30,7 @@ public class RegisterServlet extends HttpServlet {
                     password
             );
             DaoFactory.getUsersDao().insert(user);
-            response.sendRedirect("/profile");
+            response.sendRedirect("/login");
         }
 
 
