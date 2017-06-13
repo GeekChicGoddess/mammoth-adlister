@@ -9,7 +9,9 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
+        <div class="jumbotron">
         <h1>Welcome to the Adlister!</h1>
+        </div>
     </div>
 </body>
 </html>

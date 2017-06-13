@@ -1,0 +1,15 @@
+.container {
+    background-color: lightsteelblue;
+}
+
+.jumbotron {
+    background-color: blanchedalmond;
+}
+
+.jumbotron > h1 {
+    text-align: center;
+}
+
+h1 {
+    color: orangered;
+}

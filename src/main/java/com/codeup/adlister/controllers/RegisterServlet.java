@@ -23,6 +23,8 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String email = request.getParameter("email");
 
+
+
         if ((username != null) && (password != null) && (email != null)) {
             User user = new User(
                     username,
